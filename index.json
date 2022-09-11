@@ -1,0 +1,81 @@
+{
+    "task1" : [
+        { 
+          "asset_id":1,
+          "asset_heading":"task heading 1",
+          "asset_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus ea necessitatibus facere, aut veniam, voluptatum nihil quia eveniet excepturi dignissimos dolorum deserunt soluta eum, quasi iusto veniam nostrum corporis. Facere eos fugiat consequatur. Neque mollitia veritatis earum accusamus quis.",
+          "asset_type":"display_asset",
+          "asset_content":"tb",
+          "display_asset_url": "blank",
+          "display_asset_image": "blank",
+          "display_asset_video": "",
+          "display_asset_docs": ""
+  },
+  {
+      "asset_id":2,
+      "asset_heading":"task heading 2",
+      "asset_description": "nope",
+      "asset_type":"input_asset",
+      "asset_content":"reflection",
+      "display_asset_url": "",
+      "display_asset_image": "blank",
+      "display_asset_video": "",
+      "display_asset_docs": ""
+  },
+  {
+      "asset_id":3,
+      "asset_heading":"task heading 3",
+      "asset_description": "nope",
+      "asset_type":"display_asset",
+      "asset_content":"reflection",
+      "display_asset_url": "https://drive.google.com/file/d/1Pxw83bTKE3KkOyYnwm1u6DSVjntSrNTp/preview?usp=sharing",
+      "display_asset_image": "blank",
+      "display_asset_video": "",
+      "display_asset_docs": ""
+    },
+    {
+          "asset_id":4,
+          "asset_heading":"task heading 4",
+          "asset_description": "nope",
+          "asset_type":"input_asset",
+          "asset_content":"article",
+          "display_asset_url": "blank",
+          "display_asset_image": "blank",
+          "display_asset_video": "",
+          "display_asset_docs": ""
+    },
+    {
+              "asset_id":5,
+              "asset_heading":"task heading 5",
+              "asset_description": "nope",
+              "asset_type":"display_asset",
+              "asset_content":"reflection",
+              "display_asset_url": "https://drive.google.com/file/d/1dBBYQsz2yt3vc4YMkRmVC3nuTBbq2GON/preview?usp=sharing",
+              "display_asset_image": "blank",
+              "display_asset_video": "",
+              "display_asset_docs": ""
+        },
+        {
+                  "asset_id":6,
+                  "asset_heading":"task heading 6",
+                  "asset_description": "nope",
+                  "asset_type":"display_asset",
+                  "asset_content":"audio",
+                  "display_asset_url": "https://www.youtube.com/embed/s8H0Sx7jy7c",
+                  "display_asset_image": "blank",
+                  "display_asset_video": "",
+                  "display_asset_docs": ""
+            },
+            {
+                "asset_id":7,
+                "asset_heading":"task heading 7",
+                "asset_description": "nope",
+                "asset_type":"display_asset",
+                "asset_content":"video",
+                "display_asset_url": "https://www.youtube.com/embed/s8H0Sx7jy7c",
+                "display_asset_image": "blank",
+                "display_asset_video": "",
+                "display_asset_docs": ""
+          }
+]
+}

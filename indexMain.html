@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <style>
+        body{
+            background-color: gray;
+        }
+        .btn{
+            text-align: center;
+            height: 75px;
+            width: 240px;
+            background-color:rgb(35, 198, 16);
+            color: white;
+            margin: auto auto;
+            border-radius: 30px;
+            box-shadow: 0px 0px 4px;
+            text-align: center;
+            padding-top: 15px;
+        }
+        .task:hover{
+           background-color: rgb(248, 248, 52);
+           width:250px;
+           height: 70px;
+           transform: translate(50s);
+           box-shadow: 0px 0px 4px solid black;
+           border-color: 22px black;
+           color: black;
+        }
+    
+    @media(max-width:1095px)
+{
+    #apiindia
+    {
+        font-size: 7vw;
+    }
+    #F
+    {
+        font-size: 3vw;
+    }
+    
+}
+    </style>
+    </head>
+   <body>
+      <div class="container-fluid">
+       <div class="row" style="border:2px solid black;">
+        <div class="col-lg-3 col-md-4 col-4" style="background-color:white;float: left;">
+                <div class="row" id="dutton1"  style="height:105px;background-color:white;border: 2px solid black;">
+                  <div class="btn btn-primary" onclick="myfunction('0')" id="task1">ASSET 1</div>
+                </div>
+                <div class="row" id=button2 style="height:110px; background-color:white;border: 2px solid black;">
+                <div class="btn btn-primary" onclick="myfunction('1')" id="task2">ASSET 2</div>
+                </div>
+                <div class="row" id=button3 style="height:110px;background-color:white;border: 2px solid black;">
+                 <div class="btn btn-primary" onclick="myfunction('2')" id="task3">ASSET 3</div>
+                </div>
+                <div class="row" id=button4 style="height:110px;background-color:white;border: 2px solid black;">
+                 <div class="btn btn-primary" onclick="myfunction('3')" id="task4">ASSET 4</div>
+                </div>
+                <div class="row" id=button5 style="height:110px;background-color:white;border: 2px solid black;">
+                 <div class="btn btn-primary" onclick="myfunction('4')" id="task5">ASSET 5</div>
+                </div>
+                <div class="row" id=button6 style="height:110px;background-color: white;border: 2px solid black;">
+                 <div class="btn btn-primary" onclick="myfunction('5')" id="task6">ASSET 6</div>
+                </div>
+                <div class="row" id=button7 style="height:100px;background-color:white;border: 2px solid black;">
+                 <div class="btn btn-primary" onclick="myfunction('6')" id="task7">ASSET 7</div>
+                </div>
+                </div>
+        <div class="col-lg-9 col-md-8 col-8">
+           <div class="row" style="height:80px;background-color:blue">
+            <h2 style="text-align:center;padding:auto;margin:auto;color: white;">ASSETS</h2>
+        </div>
+        <div class="row" id="A" style="background-color:gray;color: white;">
+               <div class="col-lg-4 col-md-4 col-4" style="color:white;padding-top: 20px;">
+                   <h3 id="F">Asset ID =></h3><br>
+                   <h3 id="F">Asset heading =></h3><br>
+                   <h3 id="F">Asset description =></h3><br>
+                   <h3 id="F">Asset type =></h3><br>
+                   <h3 id="F">Asset content =></h3><br>
+                   <h3 id="F">Asset url =></h3><br>
+                   <h3 id="F">Asset image =></h3><br>
+               </div>
+               <div class="col-lg-8 col-md-8 col-8">
+                <h3 id="apiindia"style="padding-top:20px;overflow:auto;">Nothing is showing here <h3 style="float:left;background-color:rgb(206, 209, 26);color:black">(CLICK)</h3></h3>
+                </div>
+              </div> 
+              </div>
+          </div>
+ </div>
+      </div>
+      <script>
+           function myfunction(n){
+            switch(n){
+             case '0':
+        fetch('https://shainaislam.github.io/jsonn/')
+        .then( (apidata) =>{
+            // console.log(apidata);
+            return apidata.json();
+        })
+        .then((actualdata)=>{
+            // console.log(actualdata);
+            const mydata = actualdata.task1[0];
+
+            document.getElementById('apiindia').innerHTML = `${mydata.asset_id} <br><br> ${mydata.asset_heading} <br><br> ${mydata.asset_description} <br><br> ${mydata.asset_type} <br><br> ${mydata.asset_content} <br><br> ${mydata.display_asset_url} <br><br> ${mydata.display_asset_image} <br><br> ${mydata.display_asset_video} <br><br> ${mydata.display_asset_docs}`;
+        })
+        .catch((error)=>{
+           console.log(error);
+        });
+        break;
+        ///2nd
+       case '1':
+        fetch('https://shainaislam.github.io/jsonn/')
+        .then( (apidata) =>{
+            // console.log(apidata);
+            return apidata.json();
+        })
+        .then((actualdata)=>{
+            // console.log(actualdata);
+            const mydata = actualdata.task1[1];
+
+            document.getElementById('apiindia').innerHTML = `${mydata.asset_id} <br><br> ${mydata.asset_heading} <br><br> ${mydata.asset_description} <br><br> ${mydata.asset_type} <br><br> ${mydata.asset_content} <br><br> ${mydata.display_asset_url} <br><br> ${mydata.display_asset_image} <br><br> ${mydata.display_asset_video} <br><br> ${mydata.display_asset_docs}`;
+        })
+        .catch((error)=>{
+           console.log(error);
+        });
+        break;
+         ///3nd
+        case '2':
+        fetch('https://shainaislam.github.io/jsonn/')
+        .then( (apidata) =>{
+            // console.log(apidata);
+            return apidata.json();
+        })
+        .then((actualdata)=>{
+            // console.log(actualdata);
+            const mydata = actualdata.task1[2];
+
+            document.getElementById('apiindia').innerHTML = `${mydata.asset_id} <br><br> ${mydata.asset_heading} <br><br> ${mydata.asset_description} <br><br> ${mydata.asset_type} <br><br> ${mydata.asset_content} <br><br> ${mydata.display_asset_url} <br><br> ${mydata.display_asset_image} <br><br> ${mydata.display_asset_video} <br><br> ${mydata.display_asset_docs}`;
+        })
+        .catch((error)=>{
+           console.log(error);
+        });
+        break;
+         ///4nd
+        case '3':
+        fetch('https://shainaislam.github.io/jsonn/')
+        .then( (apidata) =>{
+            // console.log(apidata);
+            return apidata.json();
+        })
+        .then((actualdata)=>{
+            // console.log(actualdata);
+            const mydata = actualdata.task1[3];
+
+            document.getElementById('apiindia').innerHTML = `${mydata.asset_id} <br><br> ${mydata.asset_heading} <br><br> ${mydata.asset_description} <br><br> ${mydata.asset_type} <br><br> ${mydata.asset_content} <br><br> ${mydata.display_asset_url} <br><br> ${mydata.display_asset_image} <br><br> ${mydata.display_asset_video} <br><br> ${mydata.display_asset_docs}`;
+        })
+        .catch((error)=>{
+           console.log(error);
+        });
+        break;
+         ///5nd
+        case '4':
+        fetch('https://shainaislam.github.io/jsonn/')
+        .then( (apidata) =>{
+            // console.log(apidata);
+            return apidata.json();
+        })
+        .then((actualdata)=>{
+            // console.log(actualdata);
+            const mydata = actualdata.task1[4];
+
+            document.getElementById('apiindia').innerHTML = `${mydata.asset_id} <br><br> ${mydata.asset_heading} <br><br> ${mydata.asset_description} <br><br> ${mydata.asset_type} <br><br> ${mydata.asset_content} <br><br> ${mydata.display_asset_url} <br><br> ${mydata.display_asset_image} <br><br> ${mydata.display_asset_video} <br><br> ${mydata.display_asset_docs}`;
+        })
+        .catch((error)=>{
+           console.log(error);
+        });
+        break;
+         ///6nd
+        case '5':
+        fetch('https://shainaislam.github.io/jsonn/')
+        .then( (apidata) =>{
+            // console.log(apidata);
+            return apidata.json();
+        })
+        .then((actualdata)=>{
+            // console.log(actualdata);
+            const mydata = actualdata.task1[5];
+
+            document.getElementById('apiindia').innerHTML = `${mydata.asset_id} <br><br> ${mydata.asset_heading} <br><br> ${mydata.asset_description} <br><br> ${mydata.asset_type} <br><br> ${mydata.asset_content} <br><br> ${mydata.display_asset_url} <br><br> ${mydata.display_asset_image} <br><br> ${mydata.display_asset_video} <br><br> ${mydata.display_asset_docs}`;
+        })
+        .catch((error)=>{
+           console.log(error);
+        });
+        break;
+        ///7nd
+        case '6':
+        fetch('https://shainaislam.github.io/jsonn/')
+        .then( (apidata) =>{
+            // console.log(apidata);
+            return apidata.json();
+        })
+        .then((actualdata)=>{
+            // console.log(actualdata);
+            const mydata = actualdata.task1[6];
+
+            document.getElementById('apiindia').innerHTML = `${mydata.asset_id} <br><br> ${mydata.asset_heading} <br><br> ${mydata.asset_description} <br><br> ${mydata.asset_type} <br><br> ${mydata.asset_content} <br><br> ${mydata.display_asset_url} <br><br> ${mydata.display_asset_image} <br><br> ${mydata.display_asset_video} <br><br> ${mydata.display_asset_docs}`;
+        })
+        .catch((error)=>{
+           console.log(error);
+        });
+        break;
+    }
+}
+      </script>
+
+      <script type="text/javascript" src="JsonNew.json"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
